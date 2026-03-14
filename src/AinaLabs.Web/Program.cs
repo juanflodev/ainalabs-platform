@@ -1,6 +1,24 @@
+using AinaLabs.Core.Interfaces;
+using AinaLabs.Infraestructure;
 using AinaLabs.Web.Components;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ITenantService, TenantService>();
+
+builder.Services.AddDbContext<AinaDbContext>(options =>
+    options.UseNpgsql(
+        builder.Configuration.GetConnectionString("DefaultConnection"), 
+        o => o.UseVector()
+    ));
+
+builder.Services.AddAuthentication(options =>
+{
+    // Todo: pendiente de configuración OIDC/Cookies más adelante
+});
+
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -18,6 +36,10 @@ if (!app.Environment.IsDevelopment())
 
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
 
 app.UseAntiforgery();
 
