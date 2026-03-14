@@ -9,7 +9,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\AinaLabs.Core\AinaLabs.Core.csproj" />
-      <ProjectReference Include="..\AinaLabs.Infraestructure\AinaLabs.Infraestructure.csproj" />
+      <ProjectReference Include="..\AinaLabs.Infrastructure\AinaLabs.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

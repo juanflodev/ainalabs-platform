@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AinaLabs.Web", "AinaLabs.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AinaLabs.Core", "AinaLabs.Core\AinaLabs.Core.csproj", "{C9A78C20-4B82-4DCD-9E67-33A926F56701}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AinaLabs.Infraestructure", "AinaLabs.Infraestructure\AinaLabs.Infraestructure.csproj", "{4C469BD9-5475-4789-8B96-3D212EEE6155}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AinaLabs.Infrastructure", "AinaLabs.Infrastructure\AinaLabs.Infrastructure.csproj", "{4C469BD9-5475-4789-8B96-3D212EEE6155}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AinaLabs.Shared", "AinaLabs.Shared\AinaLabs.Shared.csproj", "{8E39A37F-4089-43E0-886E-A81982E1D929}"
 EndProject

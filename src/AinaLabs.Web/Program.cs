@@ -1,5 +1,6 @@
 using AinaLabs.Core.Interfaces;
-using AinaLabs.Infraestructure;
+using AinaLabs.Infrastructure;
+using AinaLabs.Infrastructure.Services;
 using AinaLabs.Web.Components;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,7 +13,7 @@ builder.Services.AddDbContext<AinaDbContext>(options =>
     options.UseNpgsql(
         builder.Configuration.GetConnectionString("DefaultConnection"), 
         o => o.UseVector()
-    ));
+    ).UseSnakeCaseNamingConvention());
 
 builder.Services.AddHttpClient<AiEngineClient>(client =>
 {

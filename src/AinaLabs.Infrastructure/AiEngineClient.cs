@@ -1,6 +1,6 @@
 using System.Net.Http.Json;
 
-namespace AinaLabs.Infraestructure;
+namespace AinaLabs.Infrastructure;
 
 
 // DTOs para la solicitud

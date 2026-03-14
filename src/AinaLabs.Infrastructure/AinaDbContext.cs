@@ -1,9 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-using System.Data;
 using AinaLabs.Core.Interfaces;
 using AinaLabs.Core.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace AinaLabs.Infraestructure;
+namespace AinaLabs.Infrastructure;
 
 public class AinaDbContext : DbContext
 {
@@ -20,11 +19,21 @@ public class AinaDbContext : DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Document>().ToTable("Documents");
-        modelBuilder.Entity<DocumentChunk>().ToTable("DocumentChunks");
-        
-        // Configuración para el tipo 'vector' de pgvector
+        // 1. Siempre llamar al base primero
+        base.OnModelCreating(modelBuilder);
+
+        // 2. Extensión de IA
         modelBuilder.HasPostgresExtension("vector");
+
+        // 3. FORZAR LOS NOMBRES EXACTOS DE LAS TABLAS EN MINÚSCULAS
+        modelBuilder.Entity<Tenant>().ToTable("tenants");
+        modelBuilder.Entity<Document>().ToTable("documents");
+        modelBuilder.Entity<DocumentChunk>().ToTable("document_chunks");
+
+        // 4. Forzar los nombres exactos de las columnas clave (por si acaso)
+        modelBuilder.Entity<Document>()
+            .Property(d => d.TenantId)
+            .HasColumnName("tenant_id");
     }
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())

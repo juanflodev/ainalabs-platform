@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AinaLabs.Core.Models;
 
 
-[Table("Documents")]
+[Table("documents")]
 public class Document
 {
   [Key]
