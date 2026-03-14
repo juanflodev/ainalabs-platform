@@ -102,5 +102,9 @@ async def analyze_pdf(request: AnalyzePdfRequest):
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
+    
+# Endpoint de salud para monitorización
+@app.get("/api/v1/health")
+async def health_check():
+    return {"status": "healthy", "service": "AinaLabs AI Engine"}
         
