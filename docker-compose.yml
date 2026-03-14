@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  # ==========================================
+  # SERVIDOR DE BASE DE DATOS (PostgreSQL + pgvector)
+  # ==========================================
+  db:
+    # Usamos una imagen oficial que YA trae la extensión pgvector instalada
+    image: pgvector/pgvector:pg16
+    container_name: ainalabs_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ainalabs_admin
+      POSTGRES_PASSWORD: super_password_seguro_123
+      POSTGRES_DB: ainalabs_db
+    ports:
+      - "5432:5432" # Exponemos el puerto para que Rider/.NET/Python puedan conectarse
+    volumes:
+      - pgdata:/var/lib/postgresql/data # Guardamos los datos para que no se borren al apagar Docker
+
+volumes:
+  pgdata:
