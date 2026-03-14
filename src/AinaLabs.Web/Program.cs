@@ -14,6 +14,12 @@ builder.Services.AddDbContext<AinaDbContext>(options =>
         o => o.UseVector()
     ));
 
+builder.Services.AddHttpClient<AiEngineClient>(client =>
+{
+    var baseUrl = builder.Configuration.GetValue<string>("AiEngine:BaseUrl");
+    client.BaseAddress = new Uri(baseUrl!);
+});
+
 builder.Services.AddAuthentication(options =>
 {
     // Todo: pendiente de configuración OIDC/Cookies más adelante
