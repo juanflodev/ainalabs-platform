@@ -3,6 +3,6 @@ src/AinaLabs.Core/obj
 src/AinaLabs.Shared/bin
 src/AinaLabs.Shared/obj
 src/AinaLabs.Web/bin
-src/AinaLabs.Web/obj
+src/AinaLabs.Web/obj/
 src/AinaLabs.Infrastructure/bin/**
 src/AinaLabs.Infrastructure/obj/**
