@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AinaLabs.Api", "AinaLabs.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AinaLabs.Core", "AinaLabs.Core\AinaLabs.Core.csproj", "{C9A78C20-4B82-4DCD-9E67-33A926F56701}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AinaLabs.Infraestructure", "AinaLabs.Infraestructure\AinaLabs.Infraestructure.csproj", "{4C469BD9-5475-4789-8B96-3D212EEE6155}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{C9A78C20-4B82-4DCD-9E67-33A926F56701}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9A78C20-4B82-4DCD-9E67-33A926F56701}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9A78C20-4B82-4DCD-9E67-33A926F56701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C469BD9-5475-4789-8B96-3D212EEE6155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C469BD9-5475-4789-8B96-3D212EEE6155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C469BD9-5475-4789-8B96-3D212EEE6155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C469BD9-5475-4789-8B96-3D212EEE6155}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
