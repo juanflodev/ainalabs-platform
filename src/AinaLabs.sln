@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AinaLabs.Web", "AinaLabs.Web\AinaLabs.Web.csproj", "{3E149E98-01EE-4D38-898E-B658051DB72F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AinaLabs.Api", "AinaLabs.Api\AinaLabs.Api.csproj", "{C678833A-DDB1-470B-B19A-227469033114}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{3E149E98-01EE-4D38-898E-B658051DB72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E149E98-01EE-4D38-898E-B658051DB72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E149E98-01EE-4D38-898E-B658051DB72F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C678833A-DDB1-470B-B19A-227469033114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C678833A-DDB1-470B-B19A-227469033114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C678833A-DDB1-470B-B19A-227469033114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C678833A-DDB1-470B-B19A-227469033114}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
