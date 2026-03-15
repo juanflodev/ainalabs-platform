@@ -20,16 +20,22 @@ public class DocumentChunk
     [Column("document_id")]
     public Guid DocumentId { get; set; }
 
-    [Required] [Column("content")] public string Content { get; set; } = string.Empty;
+    [Required] [Column("content")] 
+    public string Content { get; set; } = string.Empty;
     
-    // Aquí usamos el tipo Vector del paguete pgvector
-    [Column("embedding", TypeName = "vector(1536")] 
-    public Vector? Embedding { get; set; }
+    [Column("model_used")]
+    public string? ModelUsed { get; set; }
+
+    [Column("embedding_768", TypeName = "vector(768)")]
+    public Vector? Embedding768 { get; set; }
+
+    [Column("embedding_1536", TypeName = "vector(1536)")]
+    public Vector? Embedding1536 { get; set; }
     
     [Column("created_at")]
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     
-    // Propiedades de navegación
+
     [ForeignKey("TenantId")]
     public Tenant? Tenant { get; set; }
     
