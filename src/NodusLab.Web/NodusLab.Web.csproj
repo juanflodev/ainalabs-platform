@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+        <AssemblyName>NodusLab.Web</AssemblyName>
+        <RootNamespace>NodusLab.Web</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NodusLab.Core\NodusLab.Core.csproj" />
+      <ProjectReference Include="..\NodusLab.Infrastructure\NodusLab.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
